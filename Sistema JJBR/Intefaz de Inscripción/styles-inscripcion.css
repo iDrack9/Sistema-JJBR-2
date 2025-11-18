@@ -1,0 +1,133 @@
+body {
+    background: #e3e6f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #3a3a8c;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 2px solid #c4c7f5;
+}
+
+h2 {
+    color: #3a3a8c;
+    margin-bottom: 10px;
+}
+
+/* Materias */
+.materias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#materias-section.deshabilitado {
+    opacity: 0.4;
+}
+
+/* Días */
+.dias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Horas por día */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.horario-btn {
+    padding: 15px;
+    border: none;
+    background: #c4c7f5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2a2a6d;
+    transition: 0.2s;
+}
+
+.horario-btn:hover {
+    background: #a5a8f0;
+}
+
+.horario-btn.seleccionado {
+    background: #6b6ee8;
+    color: white;
+}
+
+.horario-btn.ocupado {
+    background: #8d8d8d;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Inputs y Selects uniformes */
+select, input[type="number"] {
+    width: 120px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 2px solid #c4c7f5;
+    outline: none;
+    background: #f4f5ff;
+    color: #2a2a6d;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #6b6ee8;
+}
+
+/* Horario exacto */
+.horario-exacto-select {
+    width: 200px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #c4c7f5;
+    background: #f4f5ff;
+    color: #2a2a6d;
+}
+
+/* Resumen */
+.resumen span {
+    font-weight: bold;
+    color: #2a2a6d;
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #4c4fe3;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover {
+    background: #2c2fb8;
+}

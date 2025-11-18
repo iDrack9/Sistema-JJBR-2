@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Mentoría U</title>
+    <link rel="stylesheet" href="styles-inscripcion.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="titulo">Inscripción</h1>
+
+        <!-- Tipo de asesoría -->
+        <section class="card">
+            <h2>Tipo de Asesoría</h2>
+            <select id="tipo-asesoria">
+                <option value="materias">Por Materias</option>
+                <option value="exani">EXANI-II (Prepa)</option>
+                <option value="exani">EXANI-II (Facultad)</option>
+                <option value="personalizada">Asesoría Personalizada</option>
+            </select>
+        </section>
+
+        <!-- Materias -->
+        <section id="materias-section" class="card">
+            <h2>Materias</h2>
+            <div class="materias-grid">
+                <label><input type="checkbox"> Materia 1</label>
+                <label><input type="checkbox"> Materia 2</label>
+                <label><input type="checkbox"> Materia 3</label>
+                <label><input type="checkbox"> Materia 4</label>
+                <label><input type="checkbox"> Materia 5</label>
+                <label><input type="checkbox"> Materia 6</label>
+                <label><input type="checkbox"> Materia 7</label>
+                <label><input type="checkbox"> Materia 8</label>
+                <label><input type="checkbox"> Materia 9</label>
+                <label><input type="checkbox"> Materia 10</label>
+            </div>
+        </section>
+
+        <!-- Días -->
+        <section class="card">
+            <h2>Días de la Semana</h2>
+            <div class="dias-grid">
+                <label><input type="checkbox" class="dia-semana"> Lunes</label>
+                <label><input type="checkbox" class="dia-semana"> Martes</label>
+                <label><input type="checkbox" class="dia-semana"> Miércoles</label>
+                <label><input type="checkbox" class="dia-semana"> Jueves</label>
+                <label><input type="checkbox" class="dia-semana"> Viernes</label>
+                <label><input type="checkbox" class="dia-semana"> Sábado</label>
+                <label><input type="checkbox" class="dia-semana"> Domingo</label>
+            </div>
+        </section>
+
+        <!-- Semanas / Meses -->
+        <section class="card">
+            <h2>Duración Total</h2>
+            <label>Semanas: <input type="number" id="semanas-input" min="0" value="0"></label>
+            <label>Meses: <input type="number" id="meses-input" min="0" value="0"></label>
+            <p>Total de días estimados: <span id="total-dias">0</span></p>
+        </section>
+
+        <!-- Horas por día -->
+        <section class="card">
+            <h2>Horas por Día</h2>
+            <div class="horarios-grid">
+                <button class="horario-btn" id="h1">1 hr</button>
+                <button class="horario-btn" id="h2">2 hrs</button>
+                <button class="horario-btn" id="h3">3 hrs</button>
+                <button class="horario-btn" id="h4">4 hrs</button>
+            </div>
+        </section>
+
+        <!-- Selección de horario exacto -->
+        <section class="card">
+            <h2>Horario</h2>
+            <p>Selecciona un horario disponible según las horas elegidas:</p>
+            <select id="horario-exacto">
+                <option value="">Seleccione un horario...</option>
+            </select>
+        </section>
+
+        <!-- Totales -->
+        <section class="card resumen">
+            <h2>Resumen</h2>
+            <p>Horas por día: <span id="total-horas">0</span></p>
+            <p>Días totales: <span id="total-dias-resumen">0</span></p>
+            <p>Total a Pagar: <span id="total-precio">$0 MXN</span></p>
+            <button id="pagar-btn" class="btn-pagar">Pagar</button>
+        </section>
+    </div>
+
+    <script src="inscripcion.js"></script>
+</body>
+</html>

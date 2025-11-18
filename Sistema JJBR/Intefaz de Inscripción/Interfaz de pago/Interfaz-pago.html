@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Mentoría U</title>
+    <link rel="stylesheet" href="Css-pago.css">
+</head>
+<body>
+    <div class="contenedor-pago">
+        <h1>Pago por Transferencia</h1>
+        <div class="datos-banco">
+    <h3>Datos para realizar el pago</h3>
+
+    <p><strong>Banco:</strong> <span id="banco">BANCO</span></p>
+    <p><strong>Clave interbancaria:</strong> <span id="num-tarjeta">00 0000 0000 0000 0000</span></p>
+    <p><strong>Número de tarjeta:</strong> <span id="num-tarjeta">0000 0000 0000 0000</span></p>
+    <p><strong>Titular:</strong> <span id="titular">Mentoría U</span></p>
+</div>
+
+
+        <p>Sube tu comprobante de pago para continuar:</p>
+        <input type="file" id="comprobante" accept="image/*,application/pdf">
+        
+        <button id="verificar-btn" disabled>Verificar Comprobante</button>
+
+        <div id="registro" style="display:none;">
+            <p>Matrícula asignada:</p>
+            <input type="text" id="matricula" readonly>
+
+            <label>Crea tu contraseña:</label>
+            <input type="password" id="password" placeholder="Mínimo 8 caracteres">
+
+            <!-- Barra de fortaleza de contraseña -->
+            <div class="strength-bar">
+                <div class="strength-fill"></div>
+            </div>
+
+            <label>Confirma tu contraseña:</label>
+            <input type="password" id="confirm-password" placeholder="Vuelve a escribir tu contraseña">
+
+            <button id="guardar-btn">Guardar</button>
+        </div>
+
+        <div id="tarjeta-final" class="tarjeta" style="display:none;">
+            <p>Matrícula: <span id="tarjeta-matricula"></span>
+            <button class="copiar-btn" onclick="copiarTexto('tarjeta-matricula')">Copiar</button></p>
+            <p>Contraseña: <span id="tarjeta-password"></span>
+            <button class="copiar-btn" onclick="copiarTexto('tarjeta-password')">Copiar</button></p>
+            <button id="finalizar-btn">Finalizar</button>
+        </div>
+    </div>
+
+    <script src="Js-pago.js"></script>
+</body>
+</html>
